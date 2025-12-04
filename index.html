@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Q4 Earnings Review - Interactive Reveal.js Deck</title>
+
+  <meta name="description" content="Quarterly Earnings Report - Interactive Reveal.js Presentation">
+  <meta name="author" content="Shreedeep M">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Reveal.js core CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/atom-one-dark.min.css">
+
+  <style>
+    /* Custom tweaks */
+    .reveal section h1, 
+    .reveal section h2, 
+    .reveal section h3 {
+      text-transform: none;
+    }
+
+    .email-tag {
+      font-size: 0.6em;
+      opacity: 0.8;
+    }
+
+    .kpi-highlight {
+      font-size: 1.4em;
+      font-weight: 700;
+      color: #00e676;
+    }
+
+    .comment {
+      color: #6a9955;
+    }
+  </style>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- Title Slide -->
+    <section>
+      <h1>Q4 Earnings Report</h1>
+      <h3>Interactive Financial Overview</h3>
+      <p class="email-tag">
+        Prepared by: <strong>Technical Consultant</strong><br>
+        Contact: <a href="mailto:23f3000339@ds.study.iitm.ac.in">23f3000339@ds.study.iitm.ac.in</a>
+      </p>
+
+      <aside class="notes">
+        Welcome everyone. This deck showcases both the quarterly earnings highlights
+        and our modern presentation capabilities using Reveal.js.
+        I’ll walk through financial performance, key KPIs, and a brief look at 
+        some of the underlying analytics and formulas.
+      </aside>
+    </section>
+
+    <!-- Markdown Slide (using data-markdown) -->
+    <section data-markdown>
+      <textarea data-template>
+## Agenda
+
+1. **Executive Summary**
+2. Revenue & Profitability
+3. Key Ratios & Financial Metrics
+4. Risk & Sensitivity Analysis
+5. Technology & Analytics Highlights
+6. Q&A
+
+*Note: This slide is authored directly in Markdown using Reveal.js' Markdown plugin.*
+
+Speaker note hint: Use this slide to set expectations and timing for each section.
+      </textarea>
+
+      <aside class="notes">
+        Briefly walk through the agenda and timebox each section.
+        Emphasize that we will focus on both financial results
+        and the analytics/technology that support them.
+      </aside>
+    </section>
+
+    <!-- Fragments / Animated Elements -->
+    <section>
+      <h2>Executive Summary</h2>
+      <ul>
+        <li class="fragment fade-up">
+          <span class="kpi-highlight">Revenue: +12.4% YoY</span>
+        </li>
+        <li class="fragment fade-up">
+          Net Income: +8.9% YoY
+        </li>
+        <li class="fragment fade-up">
+          Cost-to-Income Ratio improved by <strong>1.7 pp</strong>
+        </li>
+        <li class="fragment fade-up">
+          CET1 Capital Ratio remains comfortably above regulatory requirements
+        </li>
+      </ul>
+
+      <aside class="notes">
+        Use the fragment reveals to control pacing.
+        Highlight the revenue growth first, then profitability, 
+        then operational efficiency, and finally capital strength.
+        Be prepared to give absolute figures if asked.
+      </aside>
+    </section>
+
+    <!-- Code Sample with Syntax Highlighting (JavaScript analytics example) -->
+    <section>
+      <h2>Analytics: Earnings Sensitivity (Code Sample)</h2>
+      <pre><code class="language-javascript">
+// Simple NII sensitivity calculation (illustrative)
+
+function netInterestIncome(assets, yieldRate, liabilities, costRate) {
+  const interestIncome  = assets      * yieldRate;
+  const interestExpense = liabilities * costRate;
+  return interestIncome - interestExpense;
+}
+
+// 100 bps parallel shift scenario
+const baseNII = netInterestIncome(120e9, 0.045, 100e9, 0.018);
+const shockedNII = netInterestIncome(120e9, 0.055, 100e9, 0.028);
+
+console.log("Base NII (in €):", baseNII.toLocaleString());
+console.log("Shocked NII (in €):", shockedNII.toLocaleString());
+      </code></pre>
+
+      <aside class="notes">
+        This is a simplified JavaScript example showing how we might compute
+        net interest income under a base scenario vs. a parallel rate shock.
+        In production, this logic lives in our risk engine, not in a browser,
+        but it's a good illustration of how we can demonstrate analytics 
+        directly within the presentation.
+      </aside>
+    </section>
+
+    <!-- Mathematical Equations (Financial Formulas) -->
+    <section>
+      <h2>Key Financial Formulas</h2>
+
+      <p class="fragment">
+        **Net Present Value (NPV):**
+      </p>
+      <p class="fragment">
+        $$\text{NPV} = \sum_{t=1}^{T} \frac{CF_t}{(1 + r)^t} - I_0$$
+      </p>
+
+      <p class="fragment">
+        **Return on Equity (ROE):**
+      </p>
+      <p class="fragment">
+        $$\text{ROE} = \frac{\text{Net Income}}{\text{Average Shareholders' Equity}}$$
+      </p>
+
+      <p class="fragment">
+        **Cost of Equity (CAPM):**
+      </p>
+      <p class="fragment">
+        $$k_e = r_f + \beta \left( r_m - r_f \right)$$
+      </p>
+
+      <aside class="notes">
+        Walk through each formula at a high level:
+        - NPV for project and product-level investment appraisal.
+        - ROE as a top-level profitability metric from a shareholder perspective.
+        - CAPM-based cost of equity used in our hurdle rate and valuation models.
+      </aside>
+    </section>
+
+    <!-- Slide combining Markdown-style content, bullets and another formula -->
+    <section>
+      <h2>Risk-Adjusted Performance</h2>
+
+      <ul>
+        <li class="fragment">
+          We assess portfolios on a **risk-adjusted** basis, not just raw returns.
+        </li>
+        <li class="fragment">
+          Example: **Sharpe Ratio**
+          $$\text{Sharpe} = \frac{R_p - R_f}{\sigma_p}$$
+        </li>
+        <li class="fragment">
+          Higher Sharpe Ratio ⇒ better compensation for each unit of risk.
+        </li>
+      </ul>
+
+      <aside class="notes">
+        Emphasize that headline returns are not sufficient.
+        Risk-adjusted measures like the Sharpe Ratio provide a normalized
+        view, especially useful when comparing strategies or desks.
+      </aside>
+    </section>
+
+    <!-- Another Code Example: Simple DCF snippet in Python -->
+    <section>
+      <h2>Valuation: DCF Snippet (Python)</h2>
+
+      <pre><code class="language-python">
+from math import pow
+
+def npv(cash_flows, discount_rate):
+    """
+    cash_flows: list of cash flows [CF1, CF2, ..., CFT]
+    discount_rate: annual discount rate, e.g. 0.1 for 10%
+    """
+    return sum(cf / pow(1 + discount_rate, t + 1)
+               for t, cf in enumerate(cash_flows))
+
+cash_flows = [25_000_000, 27_000_000, 29_000_000, 31_000_000]
+discount_rate = 0.09
+
+project_npv = npv(cash_flows, discount_rate)
+print(f"Project NPV: €{project_npv:,.2f}")
+      </code></pre>
+
+      <aside class="notes">
+        Use this to illustrate the link between the formulas we just saw
+        and the actual implementation in our valuation tools.
+        Reinforce that in practice, we incorporate taxes, working capital,
+        terminal value, and scenario analysis — this is a pedagogical example.
+      </aside>
+    </section>
+
+    <!-- Closing / Contact Slide -->
+    <section>
+      <h2>Questions &amp; Next Steps</h2>
+      <p class="fragment">
+        Thank you for your attention.
+      </p>
+      <p class="fragment">
+        For follow-ups, please contact:<br>
+        <strong><a href="mailto:23f3000339@ds.study.iitm.ac.in">23f3000339@ds.study.iitm.ac.in</a></strong>
+      </p>
+
+      <aside class="notes">
+        Open the floor to questions.
+        Offer to share the underlying models, dashboards, or code samples
+        with interested stakeholders after the session.
+      </aside>
+    </section>
+
+  </div>
+</div>
+
+<!-- Reveal.js core library -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+
+<!-- Plugins: Markdown, Notes, Highlight, Math -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
+
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    plugins: [ RevealMarkdown, RevealNotes, RevealHighlight, RevealMath.KaTeX ],
+    // Basic configuration tweaks
+    controls: true,
+    progress: true,
+    center: true,
+    transition: 'fade', // none/fade/slide/convex/concave/zoom
+  });
+</script>
+</body>
+</html>
