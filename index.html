@@ -238,10 +238,6 @@ sns.scatterplot(data=data, x='x', y='y')
   <aside class="notes">Speaker notes visible in presenter view</aside>
 </section>;
 
-// Overview mode (press 'o')
-Reveal.addEventListener("overviewshown", function () {
-  // Custom overview behavior
-});
 
     <!-- Slide combining Markdown-style content, bullets and another formula -->
     <section>
@@ -328,6 +324,11 @@ print(f"Project NPV: €{project_npv:,.2f}")
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
 
 <script>
+  
+// Overview mode (press 'o')
+Reveal.addEventListener("overviewshown", function () {
+  // Custom overview behavior
+});
   Reveal.initialize({
     hash: true,
     slideNumber: true,
