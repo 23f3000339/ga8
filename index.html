@@ -1,344 +1,184 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Q4 Earnings Review - Interactive Reveal.js Deck</title>
+    <head>
+        <meta charset="utf-8" />
+        <title>Financial Analysis Presentation</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="description" content="Quarterly Earnings Report - Interactive Reveal.js Presentation">
-  <meta name="author" content="Shreedeep M">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!-- Reveal.js Basic Styles -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css"
+        />
+        <!-- Theme (Black is standard, but you can change to white, league, beige, etc.) -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css"
+            id="theme"
+        />
+        <!-- Code Syntax Highlighting Theme -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css"
+        />
+    </head>
 
-  <!-- Reveal.js core CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme">
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <!-- SLIDE 1: Title Slide with Email -->
+                <section>
+                    <h1>Financial Data Science</h1>
+                    <h3>Project Overview</h3>
+                    <p>
+                        <small
+                            >Presented by:
+                            <a href="mailto:23f3000339@ds.study.iitm.ac.in"
+                                >23f3000339@ds.study.iitm.ac.in</a
+                            ></small
+                        >
+                    </p>
+                    <aside class="notes">
+                        Welcome everyone. This is the introductory slide.
+                        Remember to mention the email address for
+                        correspondence.
+                    </aside>
+                </section>
 
-  <!-- Code syntax highlighting -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11/styles/atom-one-dark.min.css">
+                <!-- SLIDE 2: Markdown Content -->
+                <section data-markdown>
+                    <textarea data-template>
+                ## Agenda (Markdown)
 
-  <style>
-    /* Custom tweaks */
-    .reveal section h1, 
-    .reveal section h2, 
-    .reveal section h3 {
-      text-transform: none;
-    }
+                This slide is generated using **Markdown**.
 
-    .email-tag {
-      font-size: 0.6em;
-      opacity: 0.8;
-    }
+                - Introduction to Financial Metrics
+                - *Python* Implementation
+                - Mathematical Formulas
+                - [Data Sources](https://ds.study.iitm.ac.in)
 
-    .kpi-highlight {
-      font-size: 1.4em;
-      font-weight: 700;
-      color: #00e676;
-    }
+                ---
 
-    .comment {
-      color: #6a9955;
-    }
-  </style>
-</head>
-<body>
-<div class="reveal">
-  <div class="slides">
+                ### Sub-section
+                Markdown makes it easy to write content quickly.
+            </textarea
+                    >
+                </section>
 
-    <!-- Title Slide -->
-    <section>
-      <h1>Q4 Earnings Report</h1>
-      <h3>Interactive Financial Overview</h3>
-      <p class="email-tag">
-        Prepared by: <strong>Technical Consultant</strong><br>
-        Contact: <a href="mailto:23f3000339@ds.study.iitm.ac.in">23f3000339@ds.study.iitm.ac.in</a>
-      </p>
-      <h1>(23f3000339@ds.study.iitm.ac.in) </h1>
+                <!-- SLIDE 3: Animated Fragments -->
+                <section>
+                    <h2>Analysis Workflow</h2>
+                    <p>Steps involved in the process:</p>
+                    <ul>
+                        <li class="fragment fade-in-then-semi-out">
+                            1. Data Ingestion
+                        </li>
+                        <li class="fragment fade-in-then-semi-out">
+                            2. Data Cleaning
+                        </li>
+                        <li class="fragment highlight-blue">
+                            3. Statistical Modeling
+                        </li>
+                        <li class="fragment highlight-red">4. Visualization</li>
+                        <li class="fragment fade-up">5. Reporting</li>
+                    </ul>
+                    <aside class="notes">
+                        Click next to reveal each step. Emphasize the Blue and
+                        Red highlighted steps as the core of the project.
+                    </aside>
+                </section>
 
-      <aside class="notes">
-        Welcome everyone. This deck showcases both the quarterly earnings highlights
-        and our modern presentation capabilities using Reveal.js.
-        I’ll walk through financial performance, key KPIs, and a brief look at 
-        some of the underlying analytics and formulas.
-      </aside>
-    </section>
+                <!-- SLIDE 4: Code with Syntax Highlighting -->
+                <section>
+                    <h2>Python Implementation</h2>
+                    <p>Calculating Future Value (FV)</p>
+                    <pre><code class="python" data-line-numbers="1-2|4-6|8">
+import numpy as np
 
-    <!-- Markdown Slide (using data-markdown) -->
-    <section data-markdown>
-      <textarea data-template>
-## Agenda
+def calculate_compound_interest(principal, rate, years):
+    # Standard formula for Compound Interest
+    amount = principal * (1 + rate) ** years
+    return amount
 
-1. **Executive Summary**
-2. Revenue & Profitability
-3. Key Ratios & Financial Metrics
-4. Risk & Sensitivity Analysis
-5. Technology & Analytics Highlights
-6. Q&A
+# Calculate for $1000 at 5% for 10 years
+result = calculate_compound_interest(1000, 0.05, 10)
+print(f"Future Value: ${result:.2f}")
+            </code></pre>
+                    <aside class="notes">
+                        Explain the code block. Line 1-2: Imports and
+                        definition. Line 4-6: The logic. Line 8: Execution.
+                    </aside>
+                </section>
 
-*Note: This slide is authored directly in Markdown using Reveal.js' Markdown plugin.*
+                <!-- SLIDE 5: Mathematical Equations -->
+                <section>
+                    <h2>Financial Formulas</h2>
+                    <p>
+                        We utilize the
+                        <strong>Net Present Value (NPV)</strong> formula:
+                    </p>
 
-Speaker note hint: Use this slide to set expectations and timing for each section.
-      </textarea>
-<h2>23f3000339@ds.study.iitm.ac.in </h2>
-      <aside class="notes">
-        Briefly walk through the agenda and timebox each section.
-        Emphasize that we will focus on both financial results
-        and the analytics/technology that support them.
-      </aside>
-    </section>
+                    <div
+                        style="
+                            font-size: 1.2em;
+                            margin-top: 30px;
+                            margin-bottom: 30px;
+                        "
+                    >
+                        \[ NPV = \sum_{t=1}^{T} \frac{R_t}{(1+i)^t} \]
+                    </div>
 
-    <!-- Fragments / Animated Elements -->
-    <section>
-      <h2>Executive Summary</h2>
-      <ul>
-        <li class="fragment fade-up">
-          <span class="kpi-highlight">Revenue: +12.4% YoY</span>
-        </li>
-        <li class="fragment fade-up">
-          Net Income: +8.9% YoY
-        </li>
-        <li class="fragment fade-up">
-          Cost-to-Income Ratio improved by <strong>1.7 pp</strong>
-        </li>
-        <li class="fragment fade-up">
-          CET1 Capital Ratio remains comfortably above regulatory requirements
-        </li>
-      </ul>
+                    <p style="font-size: 0.7em">
+                        Where:<br />
+                        $R_t$ = Net cash inflow-outflows during a single period
+                        $t$<br />
+                        $i$ = Discount rate or return that could be earned in
+                        alternative investments<br />
+                        $t$ = Number of timer periods
+                    </p>
 
-      <aside class="notes">
-        Use the fragment reveals to control pacing.
-        Highlight the revenue growth first, then profitability, 
-        then operational efficiency, and finally capital strength.
-        Be prepared to give absolute figures if asked.
-      </aside>
-    </section>
+                    <aside class="notes">
+                        Discuss the LaTeX rendering here. Explain that 'i' is
+                        critical for the valuation.
+                    </aside>
+                </section>
 
-    <!-- Code Sample with Syntax Highlighting (JavaScript analytics example) -->
-    <section>
-      <h2>Analytics: Earnings Sensitivity (Code Sample)</h2>
-      <pre><code class="language-javascript">
-// Simple NII sensitivity calculation (illustrative)
+                <!-- SLIDE 6: Conclusion -->
+                <section>
+                    <h2>Thank You</h2>
+                    <p>Any Questions?</p>
+                    <br />
+                    <p>Contact: 23f3000339@ds.study.iitm.ac.in</p>
+                </section>
+            </div>
+        </div>
 
-function netInterestIncome(assets, yieldRate, liabilities, costRate) {
-  const interestIncome  = assets      * yieldRate;
-  const interestExpense = liabilities * costRate;
-  return interestIncome - interestExpense;
-}
+        <!-- Load Reveal.js and Plugins from CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
 
-// 100 bps parallel shift scenario
-const baseNII = netInterestIncome(120e9, 0.045, 100e9, 0.018);
-const shockedNII = netInterestIncome(120e9, 0.055, 100e9, 0.028);
+        <script>
+            // Initialize Reveal.js with plugins
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                center: true,
+                hash: true,
 
-console.log("Base NII (in €):", baseNII.toLocaleString());
-console.log("Shocked NII (in €):", shockedNII.toLocaleString());
-      </code></pre>
+                // Transition style
+                transition: "convex", // none/fade/slide/convex/concave/zoom
 
-      <aside class="notes">
-        This is a simplified JavaScript example showing how we might compute
-        net interest income under a base scenario vs. a parallel rate shock.
-        In production, this logic lives in our risk engine, not in a browser,
-        but it's a good illustration of how we can demonstrate analytics 
-        directly within the presentation.
-      </aside>
-    </section>
-
-    <!-- Mathematical Equations (Financial Formulas) -->
-    <section>
-      <h2>Key Financial Formulas</h2>
-
-      <p class="fragment">
-        **Net Present Value (NPV):**
-      </p>
-      <p class="fragment">
-        $$\text{NPV} = \sum_{t=1}^{T} \frac{CF_t}{(1 + r)^t} - I_0$$
-      </p>
-
-      <p class="fragment">
-        **Return on Equity (ROE):**
-      </p>
-      <p class="fragment">
-        $$\text{ROE} = \frac{\text{Net Income}}{\text{Average Shareholders' Equity}}$$
-      </p>
-
-      <p class="fragment">
-        **Cost of Equity (CAPM):**
-      </p>
-      <p class="fragment">
-        $$k_e = r_f + \beta \left( r_m - r_f \right)$$
-      </p>
-
-      <aside class="notes">
-        Walk through each formula at a high level:
-        - NPV for project and product-level investment appraisal.
-        - ROE as a top-level profitability metric from a shareholder perspective.
-        - CAPM-based cost of equity used in our hurdle rate and valuation models.
-      </aside>
-    </section>
-    <section data-markdown>
-  <textarea data-template>
-    ## Slide Title
-
-    - Bullet point 1
-    - Bullet point 2
-
-    ---
-
-    ## Next Slide
-
-    ```python
-    def hello():
-        print("Hello, World!")
-    ```
-  </textarea>
-</section>
-    <!-- List items appear one by one -->
-<section>
-  <h2>Key Points</h2>
-  <ul>
-    <li class="fragment">First point</li>
-    <li class="fragment">Second point</li>
-    <li class="fragment fade-up">Animated point</li>
-  </ul>
-</section>
-
-<!-- Chart sections appear gradually -->
-<section>
-  <h2>Data Flow</h2>
-  <div class="r-stack">
-    <img class="fragment" src="step1.svg" />
-    <img class="fragment" src="step2.svg" />
-    <img class="fragment" src="step3.svg" />
-  </div>
-</section>
-
-    <section>
-  <pre><code class="python" data-line-numbers="1-2|4,6-7|9">
-import pandas as pd
-import seaborn as sns
-
-# Load data
-data = pd.read_csv('data.csv')
-
-# Create visualization
-sns.scatterplot(data=data, x='x', y='y')
-  </code></pre>
-</section>
-    <!-- Math equations using MathJax -->
-<section>
-  <h2>Statistical Formula</h2>
-  \[P(A|B) = \frac{P(B|A)P(A)}{P(B)}\]
-</section>
-
-<!-- Mermaid diagrams -->
-<section>
-  <div class="mermaid">graph TD A[Data] -->|Process| B[Analysis] B --> C[Visualization]</div>
-</section>
- 
-<section>
-  <h2>Slide Title</h2>
-  <p>Visible content</p>
-  <aside class="notes">Speaker notes visible in presenter view</aside>
-</section>;
-
-
-    <!-- Slide combining Markdown-style content, bullets and another formula -->
-    <section>
-      <h2>Risk-Adjusted Performance</h2>
-
-      <ul>
-        <li class="fragment">
-          We assess portfolios on a **risk-adjusted** basis, not just raw returns.
-        </li>
-        <li class="fragment">
-          Example: **Sharpe Ratio**
-          $$\text{Sharpe} = \frac{R_p - R_f}{\sigma_p}$$
-        </li>
-        <li class="fragment">
-          Higher Sharpe Ratio ⇒ better compensation for each unit of risk.
-        </li>
-      </ul>
-
-      <aside class="notes">
-        Emphasize that headline returns are not sufficient.
-        Risk-adjusted measures like the Sharpe Ratio provide a normalized
-        view, especially useful when comparing strategies or desks.
-      </aside>
-    </section>
-
-    <!-- Another Code Example: Simple DCF snippet in Python -->
-    <section>
-      <h2>Valuation: DCF Snippet (Python)</h2>
-
-      <pre><code class="language-python">
-from math import pow
-
-def npv(cash_flows, discount_rate):
-    """
-    cash_flows: list of cash flows [CF1, CF2, ..., CFT]
-    discount_rate: annual discount rate, e.g. 0.1 for 10%
-    """
-    return sum(cf / pow(1 + discount_rate, t + 1)
-               for t, cf in enumerate(cash_flows))
-
-cash_flows = [25_000_000, 27_000_000, 29_000_000, 31_000_000]
-discount_rate = 0.09
-
-project_npv = npv(cash_flows, discount_rate)
-print(f"Project NPV: €{project_npv:,.2f}")
-      </code></pre>
-
-      <aside class="notes">
-        Use this to illustrate the link between the formulas we just saw
-        and the actual implementation in our valuation tools.
-        Reinforce that in practice, we incorporate taxes, working capital,
-        terminal value, and scenario analysis — this is a pedagogical example.
-      </aside>
-    </section>
-
-    <!-- Closing / Contact Slide -->
-    <section>
-      <h2>Questions &amp; Next Steps</h2>
-      <p class="fragment">
-        Thank you for your attention.
-      </p>
-      <p class="fragment">
-        For follow-ups, please contact:<br>
-        <strong><a href="mailto:23f3000339@ds.study.iitm.ac.in">23f3000339@ds.study.iitm.ac.in</a></strong>
-      </p>
-
-      <aside class="notes">
-        Open the floor to questions.
-        Offer to share the underlying models, dashboards, or code samples
-        with interested stakeholders after the session.
-      </aside>
-    </section>
-
-  </div>
-</div>
-
-<!-- Reveal.js core library -->
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
-
-<!-- Plugins: Markdown, Notes, Highlight, Math -->
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
-
-<script>
-  
-// Overview mode (press 'o')
-Reveal.addEventListener("overviewshown", function () {
-  // Custom overview behavior
-});
-  Reveal.initialize({
-    hash: true,
-    slideNumber: true,
-    plugins: [ RevealMarkdown, RevealNotes, RevealHighlight, RevealMath.KaTeX ],
-    // Basic configuration tweaks
-    controls: true,
-    progress: true,
-    center: true,
-    transition: 'fade', // none/fade/slide/convex/concave/zoom
-  });
-</script>
-</body>
+                // Plugin initialization
+                plugins: [
+                    RevealMarkdown,
+                    RevealHighlight,
+                    RevealMath.KaTeX,
+                    RevealNotes,
+                ],
+            });
+        </script>
+    </body>
 </html>
