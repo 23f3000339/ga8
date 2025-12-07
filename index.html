@@ -182,19 +182,7 @@
             <section>
                 <h2>Data Analysis Pipeline</h2>
                 <p>Our automated earnings analysis workflow:</p>
-                ```python
-def hello():
-    print("Hello, World!")
-```
-
-```javascript
-console.log("Hello, World!");
-```
-
-```css
-body {
-  background: #fff;
-}
+     
                 <pre><code class="python" data-line-numbers="1-2|4-6|8-10|12-14">import pandas as pd
 import numpy as np
 
@@ -220,7 +208,18 @@ print(summary)</code></pre>
                     segment-level summaries that feed into our reporting dashboards.
                 </aside>
             </section>
+<section>
+  <pre><code class="python" data-line-numbers="1-2|4,6-7|9">
+import pandas as pd
+import seaborn as sns
 
+# Load data
+data = pd.read_csv('data.csv')
+
+# Create visualization
+sns.scatterplot(data=data, x='x', y='y')
+  </code></pre>
+</section>
             <!-- SQL Query Example -->
             <section>
                 <h2>Database Query Example</h2>
