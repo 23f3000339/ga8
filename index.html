@@ -1,184 +1,143 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quarterly Earnings — RevealJS</title>
 
-    <title>Q3 Financial Earnings Report</title>
+  <!-- RevealJS core styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css" id="theme">
 
-    <!-- Reveal.js CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
-    <!-- Theme: Simple/White is standard for corporate financial presentations -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
-    <!-- Syntax Highlighting Theme -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+  <!-- Highlight.js for code highlighting (used by RevealHighlight) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/default.min.css">
 
-    <style>
-        /* Custom Styling for Financial Consultant Look */
-        .reveal h1, .reveal h2, .reveal h3 {
-            color: #2c3e50;
-            text-transform: none;
-        }
-        .reveal section img {
-            border: none;
-            box-shadow: none;
-        }
-        .financial-note {
-            font-size: 0.6em;
-            color: #7f8c8d;
-            margin-top: 50px;
-        }
-        /* Style for the email to match requirements */
-        .contact-email {
-            color: #2980b9;
-            font-weight: bold;
-        }
-    </style>
+  <style>
+    /* Custom styling */
+    .reveal { font-family: 'Inter', Arial, sans-serif; }
+    .chart { height: 360px; margin: 10px auto; }
+    .email { font-size: 0.9rem; opacity: 0.9; }
+  </style>
 </head>
 <body>
-
-<div class="reveal">
+  <div class="reveal">
     <div class="slides">
 
-        <!-- SLIDE 1: Title & Contact Information -->
-        <section>
-            <h1>Q3 Earnings Report</h1>
-            <h3>Strategic Financial Analysis</h3>
-            <p>
-                <small>Prepared by Technical Consultant</small><br>
-                <small>Contact: <a href="mailto:23f3000339@ds.study.iitm.ac.in" class="contact-email">23f3000339@ds.study.iitm.ac.in</a></small>
-            </p>
-            
-            <!-- Speaker Notes -->
-            <aside class="notes">
-                Good morning stakeholders. 
-                This presentation covers the Q3 earnings and the technical analysis of our revenue streams.
-                My contact email is listed on the screen for follow-up questions.
-            </aside>
-        </section>
+      <!-- Title slide -->
+      <section>
+        <h1>Quarterly Earnings — Q4</h1>
+        <p class="email">Contact: 23f3000339@ds.study.iitm.ac.in</p>
+        <aside class="notes">Open with a 1–2 line summary of the quarter and the high-level narrative.</aside>
+      </section>
 
-        <!-- SLIDE 2: Markdown Content (Agenda) -->
-        <section data-markdown>
-            <textarea data-template>
-                ## Executive Agenda
+      <!-- Markdown slide (uses data-markdown) -->
+      <section data-markdown>
+        <textarea data-template>
+## Highlights
 
-                We will cover the following key metrics:
+- Revenue grew **8.5%** year-over-year.
+- Net margin improved due to cost rationalization.
 
-                - **Revenue Growth**: YoY comparison
-                - **Operational Efficiency**: Cost reduction analysis
-                - **Tech Migration**: ROI on cloud infrastructure
-                - **Future Outlook**: Q4 Projections
+---
 
-                ---
-                
-                > "Data is the new oil."
-            </textarea>
-            <aside class="notes">
-                Here is our agenda for today. We created this slide using Markdown for easy content updates.
-                We are focusing heavily on Tech Migration ROI.
-            </aside>
-        </section>
+## Agenda
 
-        <!-- SLIDE 3: Mathematical Equations (Financial Formulas) -->
-        <section>
-            <h2>Valuation Methodology</h2>
-            <p>We utilized the <strong>Net Present Value (NPV)</strong> model to assess the new tech initiative:</p>
-            
-            <div style="margin: 40px 0;">
-                \[ NPV = \sum_{t=1}^{T} \frac{R_t}{(1+i)^t} - C_0 \]
-            </div>
+1. Key metrics
+2. Revenue breakdown
+3. Outlook & guidance
 
-            <p style="font-size: 0.7em;">
-                Where $R_t$ is net cash inflow, $i$ is the discount rate, and $C_0$ is initial investment.
-            </p>
+        </textarea>
+        <aside class="notes">Walk through slide bullets; call out the biggest surprise to stakeholders.</aside>
+      </section>
 
-            <aside class="notes">
-                The math here demonstrates how we calculated the value of our cloud migration.
-                We used a discount rate of 5%.
-            </aside>
-        </section>
+      <!-- Animated fragments -->
+      <section>
+        <h2>Key Metrics</h2>
+        <ul>
+          <li class="fragment">Revenue: $120M</li>
+          <li class="fragment">Gross Margin: 48%</li>
+          <li class="fragment fade-up">Operating Income: $22M</li>
+        </ul>
+        <aside class="notes">Use fragments to reveal metrics one-by-one; emphasize margin improvements.</aside>
+      </section>
 
-        <!-- SLIDE 4: Code Samples (Python Analysis) -->
-        <section>
-            <h2>Automated Risk Analysis</h2>
-            <p>We implemented Python scripts to detect volatility in real-time.</p>
-            
-            <pre><code class="python" data-line-numbers="1-2|4-6|8-9">
+      <!-- Code sample with syntax highlighting -->
+      <section>
+        <h2>Data Extraction (example)</h2>
+        <pre><code class="hljs language-python" data-trim data-line-numbers="1-3|5">
 import pandas as pd
-import numpy as np
 
-def calculate_volatility(price_data):
-    # Calculate daily logarithmic returns
-    log_returns = np.log(price_data / price_data.shift(1))
-    
-    # Annualized volatility
-    volatility = log_returns.std() * 252**.5
-    return volatility
-            </code></pre>
+def load_financials(path):
+    df = pd.read_csv(path)
+    return df
 
-            <aside class="notes">
-                This is the actual code running on our servers.
-                Lines 4-6 show the logarithmic return calculation.
-                Lines 8-9 convert it to an annualized metric.
-            </aside>
-        </section>
+# usage
+# df = load_financials('data/q4_financials.csv')
+</code></pre>
+        <aside class="notes">Explain the ETL pipeline in 30 seconds; point to the data schema in the appendix.</aside>
+      </section>
 
-        <!-- SLIDE 5: Animated Fragments (Key Results) -->
-        <section>
-            <h2>Q3 Key Performance Indicators</h2>
-            <p>Highlights vs. Expectations:</p>
-            
-            <ul>
-                <li class="fragment fade-in-then-semi-out">Total Revenue: <strong>$4.5M</strong> (Exceeded by 5%)</li>
-                <li class="fragment fade-in-then-semi-out">Customer Acquisition Cost: <strong>$120</strong> (Down 10%)</li>
-                <li class="fragment highlight-green">Net Profit Margin: <strong>22%</strong> (Highest in 3 years)</li>
-                <li class="fragment fade-up">Churn Rate: <strong>2.1%</strong> (Stable)</li>
-            </ul>
+      <!-- Math (financial formula) -->
+      <section>
+        <h2>Profitability — Return on Invested Capital</h2>
+        <p>We use the ROIC formula:</p>
+        <p>\[\mathrm{ROIC} = \frac{\mathrm{NOPAT}}{\mathrm{Invested\ Capital}} \times 100\%\]</p>
+        <aside class="notes">Show how NOPAT was calculated (EBIT * (1 - tax rate)).</aside>
+      </section>
 
-            <aside class="notes">
-                Press 'Next' to reveal each point.
-                Note the Green highlight on Net Profit Margin - that is our biggest win.
-            </aside>
-        </section>
+      <!-- Live demo iframe (lazy load) -->
+      <section>
+        <h2>Interactive Demo</h2>
+        <iframe data-src="https://example.com/interactive-dashboard" data-preload style="width:100%;height:500px;border:0;"></iframe>
+        <aside class="notes">If network available, click into the live dashboard; otherwise skip to summary.</aside>
+      </section>
 
-        <!-- SLIDE 6: Conclusion -->
-        <section>
-            <h2>Summary & QA</h2>
-            <p>The financial outlook remains strong.</p>
-            <br>
-            <p>Email for detailed data sets:<br>
-            <a href="mailto:23f3000339@ds.study.iitm.ac.in">23f3000339@ds.study.iitm.ac.in</a></p>
-            
-            <aside class="notes">
-                Thank you for your time. I am now open for questions.
-            </aside>
-        </section>
+      <!-- Overview slide with stack of images (fragments) -->
+      <section>
+        <h2>Data Flow</h2>
+        <div class="r-stack">
+          <img class="fragment" src="images/step1.svg" alt="step1" />
+          <img class="fragment" src="images/step2.svg" alt="step2" />
+          <img class="fragment" src="images/step3.svg" alt="step3" />
+        </div>
+        <aside class="notes">Use this to show how data moves from ingestion to reporting.</aside>
+      </section>
+
+      <!-- Closing slide with publish instructions -->
+      <section>
+        <h2>Published Report</h2>
+        <p>Deployed on GitHub Pages.</p>
+        <p class="email">Contact: 23f1003140@ds.study.iitm.ac.in</p>
+        <aside class="notes">Give link and mention caching querystring trick (?v=1) to ensure the audience sees latest assets.</aside>
+      </section>
 
     </div>
-</div>
+  </div>
 
-<!-- Scripts to load Reveal.js and Plugins -->
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+  <!-- RevealJS core script -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
 
-<script>
+  <!-- Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+
+  <!-- MathJax (for math rendering) -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script>
+    // Initialize Reveal with commonly used plugins
     Reveal.initialize({
-        // Presentation Configuration
-        controls: true,
-        progress: true,
-        center: true,
-        hash: true,
-        
-        // Transition style
-        transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-        // Load Plugins
-        plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes ]
+      width: 1280,
+      height: 720,
+      margin: 0.04,
+      controls: true,
+      progress: true,
+      history: true,
+      transition: 'slide',
+      plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ]
     });
-</script>
-
+  </script>
 </body>
 </html>
