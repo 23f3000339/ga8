@@ -1,184 +1,184 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Financial Analysis Presentation</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <!-- Reveal.js Basic Styles -->
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css"
-        />
-        <!-- Theme (Black is standard, but you can change to white, league, beige, etc.) -->
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.css"
-            id="theme"
-        />
-        <!-- Code Syntax Highlighting Theme -->
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css"
-        />
-    </head>
+    <title>Q3 Financial Earnings Report</title>
 
-    <body>
-        <div class="reveal">
-            <div class="slides">
-                <!-- SLIDE 1: Title Slide with Email -->
-                <section>
-                    <h1>Financial Data Science</h1>
-                    <h3>Project Overview</h3>
-                    <p>
-                        <small
-                            >Presented by:
-                            <a href="mailto:23f3000339@ds.study.iitm.ac.in"
-                                >23f3000339@ds.study.iitm.ac.in</a
-                            ></small
-                        >
-                    </p>
-                    <aside class="notes">
-                        Welcome everyone. This is the introductory slide.
-                        Remember to mention the email address for
-                        correspondence.
-                    </aside>
-                </section>
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <!-- Theme: Simple/White is standard for corporate financial presentations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+    <!-- Syntax Highlighting Theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
 
-                <!-- SLIDE 2: Markdown Content -->
-                <section data-markdown>
-                    <textarea data-template>
-                ## Agenda (Markdown)
+    <style>
+        /* Custom Styling for Financial Consultant Look */
+        .reveal h1, .reveal h2, .reveal h3 {
+            color: #2c3e50;
+            text-transform: none;
+        }
+        .reveal section img {
+            border: none;
+            box-shadow: none;
+        }
+        .financial-note {
+            font-size: 0.6em;
+            color: #7f8c8d;
+            margin-top: 50px;
+        }
+        /* Style for the email to match requirements */
+        .contact-email {
+            color: #2980b9;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
 
-                This slide is generated using **Markdown**.
+<div class="reveal">
+    <div class="slides">
 
-                - Introduction to Financial Metrics
-                - *Python* Implementation
-                - Mathematical Formulas
-                - [Data Sources](https://ds.study.iitm.ac.in)
+        <!-- SLIDE 1: Title & Contact Information -->
+        <section>
+            <h1>Q3 Earnings Report</h1>
+            <h3>Strategic Financial Analysis</h3>
+            <p>
+                <small>Prepared by Technical Consultant</small><br>
+                <small>Contact: <a href="mailto:23f3000339@ds.study.iitm.ac.in" class="contact-email">23f3000339@ds.study.iitm.ac.in</a></small>
+            </p>
+            
+            <!-- Speaker Notes -->
+            <aside class="notes">
+                Good morning stakeholders. 
+                This presentation covers the Q3 earnings and the technical analysis of our revenue streams.
+                My contact email is listed on the screen for follow-up questions.
+            </aside>
+        </section>
+
+        <!-- SLIDE 2: Markdown Content (Agenda) -->
+        <section data-markdown>
+            <textarea data-template>
+                ## Executive Agenda
+
+                We will cover the following key metrics:
+
+                - **Revenue Growth**: YoY comparison
+                - **Operational Efficiency**: Cost reduction analysis
+                - **Tech Migration**: ROI on cloud infrastructure
+                - **Future Outlook**: Q4 Projections
 
                 ---
+                
+                > "Data is the new oil."
+            </textarea>
+            <aside class="notes">
+                Here is our agenda for today. We created this slide using Markdown for easy content updates.
+                We are focusing heavily on Tech Migration ROI.
+            </aside>
+        </section>
 
-                ### Sub-section
-                Markdown makes it easy to write content quickly.
-            </textarea
-                    >
-                </section>
+        <!-- SLIDE 3: Mathematical Equations (Financial Formulas) -->
+        <section>
+            <h2>Valuation Methodology</h2>
+            <p>We utilized the <strong>Net Present Value (NPV)</strong> model to assess the new tech initiative:</p>
+            
+            <div style="margin: 40px 0;">
+                \[ NPV = \sum_{t=1}^{T} \frac{R_t}{(1+i)^t} - C_0 \]
+            </div>
 
-                <!-- SLIDE 3: Animated Fragments -->
-                <section>
-                    <h2>Analysis Workflow</h2>
-                    <p>Steps involved in the process:</p>
-                    <ul>
-                        <li class="fragment fade-in-then-semi-out">
-                            1. Data Ingestion
-                        </li>
-                        <li class="fragment fade-in-then-semi-out">
-                            2. Data Cleaning
-                        </li>
-                        <li class="fragment highlight-blue">
-                            3. Statistical Modeling
-                        </li>
-                        <li class="fragment highlight-red">4. Visualization</li>
-                        <li class="fragment fade-up">5. Reporting</li>
-                    </ul>
-                    <aside class="notes">
-                        Click next to reveal each step. Emphasize the Blue and
-                        Red highlighted steps as the core of the project.
-                    </aside>
-                </section>
+            <p style="font-size: 0.7em;">
+                Where $R_t$ is net cash inflow, $i$ is the discount rate, and $C_0$ is initial investment.
+            </p>
 
-                <!-- SLIDE 4: Code with Syntax Highlighting -->
-                <section>
-                    <h2>Python Implementation</h2>
-                    <p>Calculating Future Value (FV)</p>
-                    <pre><code class="python" data-line-numbers="1-2|4-6|8">
+            <aside class="notes">
+                The math here demonstrates how we calculated the value of our cloud migration.
+                We used a discount rate of 5%.
+            </aside>
+        </section>
+
+        <!-- SLIDE 4: Code Samples (Python Analysis) -->
+        <section>
+            <h2>Automated Risk Analysis</h2>
+            <p>We implemented Python scripts to detect volatility in real-time.</p>
+            
+            <pre><code class="python" data-line-numbers="1-2|4-6|8-9">
+import pandas as pd
 import numpy as np
 
-def calculate_compound_interest(principal, rate, years):
-    # Standard formula for Compound Interest
-    amount = principal * (1 + rate) ** years
-    return amount
-
-# Calculate for $1000 at 5% for 10 years
-result = calculate_compound_interest(1000, 0.05, 10)
-print(f"Future Value: ${result:.2f}")
+def calculate_volatility(price_data):
+    # Calculate daily logarithmic returns
+    log_returns = np.log(price_data / price_data.shift(1))
+    
+    # Annualized volatility
+    volatility = log_returns.std() * 252**.5
+    return volatility
             </code></pre>
-                    <aside class="notes">
-                        Explain the code block. Line 1-2: Imports and
-                        definition. Line 4-6: The logic. Line 8: Execution.
-                    </aside>
-                </section>
 
-                <!-- SLIDE 5: Mathematical Equations -->
-                <section>
-                    <h2>Financial Formulas</h2>
-                    <p>
-                        We utilize the
-                        <strong>Net Present Value (NPV)</strong> formula:
-                    </p>
+            <aside class="notes">
+                This is the actual code running on our servers.
+                Lines 4-6 show the logarithmic return calculation.
+                Lines 8-9 convert it to an annualized metric.
+            </aside>
+        </section>
 
-                    <div
-                        style="
-                            font-size: 1.2em;
-                            margin-top: 30px;
-                            margin-bottom: 30px;
-                        "
-                    >
-                        \[ NPV = \sum_{t=1}^{T} \frac{R_t}{(1+i)^t} \]
-                    </div>
+        <!-- SLIDE 5: Animated Fragments (Key Results) -->
+        <section>
+            <h2>Q3 Key Performance Indicators</h2>
+            <p>Highlights vs. Expectations:</p>
+            
+            <ul>
+                <li class="fragment fade-in-then-semi-out">Total Revenue: <strong>$4.5M</strong> (Exceeded by 5%)</li>
+                <li class="fragment fade-in-then-semi-out">Customer Acquisition Cost: <strong>$120</strong> (Down 10%)</li>
+                <li class="fragment highlight-green">Net Profit Margin: <strong>22%</strong> (Highest in 3 years)</li>
+                <li class="fragment fade-up">Churn Rate: <strong>2.1%</strong> (Stable)</li>
+            </ul>
 
-                    <p style="font-size: 0.7em">
-                        Where:<br />
-                        $R_t$ = Net cash inflow-outflows during a single period
-                        $t$<br />
-                        $i$ = Discount rate or return that could be earned in
-                        alternative investments<br />
-                        $t$ = Number of timer periods
-                    </p>
+            <aside class="notes">
+                Press 'Next' to reveal each point.
+                Note the Green highlight on Net Profit Margin - that is our biggest win.
+            </aside>
+        </section>
 
-                    <aside class="notes">
-                        Discuss the LaTeX rendering here. Explain that 'i' is
-                        critical for the valuation.
-                    </aside>
-                </section>
+        <!-- SLIDE 6: Conclusion -->
+        <section>
+            <h2>Summary & QA</h2>
+            <p>The financial outlook remains strong.</p>
+            <br>
+            <p>Email for detailed data sets:<br>
+            <a href="mailto:23f3000339@ds.study.iitm.ac.in">23f3000339@ds.study.iitm.ac.in</a></p>
+            
+            <aside class="notes">
+                Thank you for your time. I am now open for questions.
+            </aside>
+        </section>
 
-                <!-- SLIDE 6: Conclusion -->
-                <section>
-                    <h2>Thank You</h2>
-                    <p>Any Questions?</p>
-                    <br />
-                    <p>Contact: 23f3000339@ds.study.iitm.ac.in</p>
-                </section>
-            </div>
-        </div>
+    </div>
+</div>
 
-        <!-- Load Reveal.js and Plugins from CDN -->
-        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+<!-- Scripts to load Reveal.js and Plugins -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
 
-        <script>
-            // Initialize Reveal.js with plugins
-            Reveal.initialize({
-                controls: true,
-                progress: true,
-                center: true,
-                hash: true,
+<script>
+    Reveal.initialize({
+        // Presentation Configuration
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-                // Transition style
-                transition: "convex", // none/fade/slide/convex/concave/zoom
+        // Load Plugins
+        plugins: [ RevealMarkdown, RevealHighlight, RevealMath.KaTeX, RevealNotes ]
+    });
+</script>
 
-                // Plugin initialization
-                plugins: [
-                    RevealMarkdown,
-                    RevealHighlight,
-                    RevealMath.KaTeX,
-                    RevealNotes,
-                ],
-            });
-        </script>
-    </body>
+</body>
 </html>
